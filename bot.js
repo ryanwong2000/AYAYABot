@@ -1,4 +1,4 @@
-console.log("Ara ara");
+console.log("Ara araa");
 
 require('dotenv').config();
 

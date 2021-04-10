@@ -5,7 +5,7 @@ const ayaya = require('./commands/ayaya.js');
 const gif = require('./commands/gif.js');
 const twice = require('./commands/twice.js');
 
-//obj
+//obj of functions
 const commands = {ayaya, gif, twice}
 
 module.exports = async function (msg){
@@ -14,6 +14,7 @@ module.exports = async function (msg){
     if(msg.channel.id == '830440963846701106'){
         let tokens = msg.content.split(' ');
 
+        //selects the command part of the message
         let command = tokens.shift();
         // console.log(command);
         // console.log(tokens);

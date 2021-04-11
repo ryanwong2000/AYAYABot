@@ -9,9 +9,10 @@ const twice = require('./commands/twice.js');
 const commands = {ayaya, gif, twice}
 
 module.exports = async function (msg){
-    console.log(msg.content);
+    
     //checks if message is in specific channel and that content is matched
     if(msg.channel.id == '830440963846701106'){
+        console.log(msg.content);
         let tokens = msg.content.split(' ');
 
         //selects the command part of the message

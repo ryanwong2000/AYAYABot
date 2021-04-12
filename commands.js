@@ -11,7 +11,7 @@ const commands = {ayaya, gif, twice}
 module.exports = async function (msg){
     
     //checks if message is in specific channel and that content is matched
-    if(msg.channel.id == '830440963846701106'){
+    if(msg.channel.id == '830440963846701106' || msg.channel.id == '822260686658076722'){
         console.log(msg.content);
         let tokens = msg.content.split(' ');
 

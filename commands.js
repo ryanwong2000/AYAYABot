@@ -4,9 +4,10 @@ const fetch = require('node-fetch');
 const ayaya = require('./commands/ayaya.js');
 const gif = require('./commands/gif.js');
 const twice = require('./commands/twice.js');
+const wonderegg = require('./commands/wonderegg.js');
 
 //obj of functions
-const commands = {ayaya, gif, twice}
+const commands = {ayaya, gif, twice, wonderegg};
 
 module.exports = async function (msg){
     

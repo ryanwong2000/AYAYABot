@@ -20,7 +20,7 @@ function readyDiscord(){
     console.log('ohayo QoQ');
     channel = client.channels.cache.get(`831923281028317290`);
     
-    cron.schedule('0 0 12 * * WED', () => {
+    cron.schedule('* * * * * *', () => {
         channel.send("Minami 🐐");
         console.log("Minami 🐐");
     });

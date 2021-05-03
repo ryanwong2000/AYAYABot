@@ -10,6 +10,7 @@ const shows = {
 }
 
 //its messy i know, could store pass a 'show' object that has all the relevant information a general function.
+//IDEA: a foreach loop that goes through each show inside a single module.exports function...
 module.exports = {
     mtd: function(remindersChannel) {
         let show = shows.mtd;//change show here

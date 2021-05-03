@@ -12,35 +12,35 @@ const shows = {
 //its messy i know, could store pass a 'show' object that has all the relevant information a general function.
 module.exports = {
     mtd: function(remindersChannel) {
-        let show = shows.mtd;
+        let show = shows.mtd;//change show here
         cron.schedule(show.crontab, ()=>{
             console.log(show.message);
             remindersChannel.send(show.message);
         })
     },
     osamake: function(remindersChannel) {
-        let show = shows.osamake;
+        let show = shows.osamake;//change show here
         cron.schedule(show.crontab, ()=>{
             console.log(show.message);
             remindersChannel.send(show.message);
         })
     },
     superCub: function(remindersChannel) {
-        let show = shows.superCub;
+        let show = shows.superCub;//change show here
         cron.schedule(show.crontab, ()=>{
             console.log(show.message);
             remindersChannel.send(show.message);
         })
     },
     higehiro: function(remindersChannel) {
-        let show = shows.higehiro;
+        let show = shows.higehiro;//change show here
         cron.schedule(show.crontab, ()=>{
             console.log(show.message);
             remindersChannel.send(show.message);
         })
     },
     vivy: function(remindersChannel) {
-        let show = shows.vivy;
+        let show = shows.vivy;//change show here
         cron.schedule(show.crontab, ()=>{
             console.log(show.message);
             remindersChannel.send(show.message);

@@ -21,9 +21,11 @@ client.on('message', commandHandler);
 const reminders = require('./reminders');
 client.on('ready', ()=>{
     const channel = client.channels.cache.get(`831923281028317290`);
+    reminders.mtd(channel);
     reminders.osamake(channel);
     reminders.superCub(channel);
     reminders.higehiro(channel);
+    reminders.vivy(channel);
 });
 
 

@@ -2,39 +2,48 @@
 const cron = require('node-cron');
 
 const shows = {
-    
+    mtd: { crontab: '* * * * * *', message: "BOOBA" },
+    osamake: { crontab: '0 9 * * wed', message: "New Osamake episode today!" },
+    superCub: { crontab: '0 11 * * wed', message: "Super Cub widePeepoHappy" },
+    higehiro: { crontab: '0 11 * * mon', message: "New Higehiro today!" },
+    vivy: { crontab: '0 12 * * sat', message: "Vivy AYAYAJAM" }
 }
 
 //its messy i know, could store pass a 'show' object that has all the relevant information a general function.
 module.exports = {
     mtd: function(remindersChannel) {
-        cron.schedule('* * * * * *', ()=>{
-            console.log("COPIUM");
-            remindersChannel.send("BOOBA");
-        })    
+        let show = shows.mtd;
+        cron.schedule(show.crontab, ()=>{
+            console.log(show.message);
+            remindersChannel.send(show.message);
+        })
     },
     osamake: function(remindersChannel) {
-        cron.schedule('0 12 * * wed', ()=>{
-            console.log("osamake reminder " + now);
-            remindersChannel.send("New Osamake episode today!");
+        let show = shows.osamake;
+        cron.schedule(show.crontab, ()=>{
+            console.log(show.message);
+            remindersChannel.send(show.message);
         })
     },
     superCub: function(remindersChannel) {
-        cron.schedule('0 11 * * wed', ()=>{
-            console.log("Super Cub widePeepoHappy " + now);
-            remindersChannel.send("Super Cub widePeepoHappy");
+        let show = shows.superCub;
+        cron.schedule(show.crontab, ()=>{
+            console.log(show.message);
+            remindersChannel.send(show.message);
         })
     },
     higehiro: function(remindersChannel) {
-        cron.schedule('0 11 * * mon', ()=>{
-            console.log("Higehiro VeryPog");
-            remindersChannel.send("New Higehiro today!")
+        let show = shows.higehiro;
+        cron.schedule(show.crontab, ()=>{
+            console.log(show.message);
+            remindersChannel.send(show.message);
         })
     },
     vivy: function(remindersChannel) {
-        cron.schedule('0 12 * * sun', ()=>{
-            console.log("Higehiro VeryPog");
-            remindersChannel.send("New Higehiro today!")
+        let show = shows.vivy;
+        cron.schedule(show.crontab, ()=>{
+            console.log(show.message);
+            remindersChannel.send(show.message);
         })
     }
 };

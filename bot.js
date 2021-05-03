@@ -6,35 +6,24 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 client.login(process.env.BOTTOKEN);
 
-const cron = require('node-cron');
 client.on('ready', readyDiscord);
 
 function readyDiscord(){
     console.log('ohayo U.U');
+    channel.send("mtd");
 }
 
-const osamakeReminder = require("./osamakeReminder.js");
-const testReminder = require("./testReminder.js");
-client.on('ready', () => {
-    console.log('reminders');
-    remindersChannel = client.channels.cache.get(`831923281028317290`);
-    
-    cron.schedule('0 12 * * wed', osamakeReminder);
-    cron.schedule('0 11 * * wed', () => {
-        remindersChannel.send("Super Cub widePeepoHappy");
-        console.log("Super Cub widePeepoHappy");
-    })
-    cron.schedule('5 12 * * fri', testReminder);
+//automatic reminders usign node cron
+// const reminders = require('./reminders')();
+const channel = client.channels.cache.get(`831923281028317290`);
+console.log(channel);
 
-    // cron.schedule('24 10 * * thu', () => {
-    //     remindersChannel.send("Minami 🐐🐐🐐🐐");
-    //     console.log("Minami 🐐🐐🐐🐐");
-    // });
-})
 
-const commandHandler = require("./commands");
+// client.on('ready', reminders(Channel));
 
-client.on('message', commandHandler);
+//text channel commands
+// const commandHandler = require("./commands");
+// client.on('message', commandHandler);
 
 
 

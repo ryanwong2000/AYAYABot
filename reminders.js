@@ -17,35 +17,45 @@ module.exports = {
         cron.schedule(show.crontab, ()=>{
             console.log(show.message);
             remindersChannel.send(show.message);
-        })
+        }, {
+            timezone: 'America/New_York'
+        });
     },
     osamake: function(remindersChannel) {
         let show = shows.osamake;//change show here
         cron.schedule(show.crontab, ()=>{
             console.log(show.message);
             remindersChannel.send(show.message);
-        })
+        }, {
+            timezone: 'America/New_York'
+        });
     },
     superCub: function(remindersChannel) {
         let show = shows.superCub;//change show here
         cron.schedule(show.crontab, ()=>{
             console.log(show.message);
             remindersChannel.send(show.message);
-        })
+        }, {
+            timezone: 'America/New_York'
+        });
     },
     higehiro: function(remindersChannel) {
         let show = shows.higehiro;//change show here
         cron.schedule(show.crontab, ()=>{
             console.log(show.message);
             remindersChannel.send(show.message);
-        })
+        }, {
+            timezone: 'America/New_York'
+        });
     },
     vivy: function(remindersChannel) {
         let show = shows.vivy;//change show here
         cron.schedule(show.crontab, ()=>{
             console.log(show.message);
             remindersChannel.send(show.message);
-        })
+        }, {
+            timezone: 'America/New_York'
+        });
     }
 };
 

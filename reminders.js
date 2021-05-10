@@ -9,10 +9,14 @@ const shows = {
   vivy: { crontab: "0 12 * * sat", message: "Vivy AYAYAJAM" },
 };
 function reminder(remindersChannel, show) {
-  cron.schedule(show.crontab, () => {
-    console.log(show.message);
-    remindersChannel.send(show.message);
-  });
+  cron.schedule(
+    show.crontab,
+    () => {
+      console.log(show.message);
+      remindersChannel.send(show.message);
+    },
+    { timezone: "America/New_York" }
+  );
 }
 //its messy i know, could store pass a 'show' object that has all the relevant information a general function.
 //IDEA: a foreach loop that goes through each show inside a single module.exports function...
